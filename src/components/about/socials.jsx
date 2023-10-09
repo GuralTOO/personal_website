@@ -14,28 +14,18 @@ import "./styles/socials.css";
 
 const Socials = () => {
 	return (
-		<div className="socials">
-			<div className="social">
-				<a href={INFO.socials.twitter} target="_blank" rel="noreferrer">
-					<div className="social-icon">
-						<FontAwesomeIcon
-							icon={faTwitter}
-							className="social-icon"
-						/>
-					</div>
-					<div className="social-text">Follow on Twitter</div>
-				</a>
-			</div>
-
+		<div className="socials" style={{display: 'flex', flexDirection: "row", alignItems: "center", justifyContent: "center", justifyItems: "center"}}>
 			<div className="social">
 				<a href={INFO.socials.github} target="_blank" rel="noreferrer">
-					<div className="social-icon">
-						<FontAwesomeIcon
-							icon={faGithub}
-							className="social-icon"
-						/>
+					<div className="inside-link">
+						<div className="social-icon">
+							<FontAwesomeIcon
+								icon={faGithub}
+								className="social-icon"
+							/>
+						</div>
+						<div className="social-text">Check GitHub</div>
 					</div>
-					<div className="social-text">Follow on GitHub</div>
 				</a>
 			</div>
 
@@ -45,13 +35,15 @@ const Socials = () => {
 					target="_blank"
 					rel="noreferrer"
 				>
-					<div className="social-icon">
-						<FontAwesomeIcon
-							icon={faLinkedin}
-							className="social-icon"
-						/>
+					<div className="inside-link">
+						<div className="social-icon">
+							<FontAwesomeIcon
+								icon={faLinkedin}
+								className="social-icon"
+							/>
+						</div>
+						<div className="social-text">Connect on LinkedIn</div>
 					</div>
-					<div className="social-text">Follow on LinkedIn</div>
 				</a>
 			</div>
 
@@ -61,13 +53,15 @@ const Socials = () => {
 					target="_blank"
 					rel="noreferrer"
 				>
-					<div className="social-icon">
-						<FontAwesomeIcon
-							icon={faInstagram}
-							className="social-icon"
-						/>
+					<div className="inside-link">
+						<div className="social-icon">
+							<FontAwesomeIcon
+								icon={faInstagram}
+								className="social-icon"
+							/>
+						</div>
+						<div className="social-text">Follow on Instagram</div>
 					</div>
-					<div className="social-text">Follow on Instagram</div>
 				</a>
 			</div>
 
@@ -78,11 +72,12 @@ const Socials = () => {
 						target="_blank"
 						rel="noreferrer"
 					>
-						<div className="social-icon">
-							<FontAwesomeIcon icon={faEnvelope} />
+						<div className="inside-link">
+							<div className="social-icon">
+								<FontAwesomeIcon icon={faEnvelope} />
+							</div>
+							<div className="social-text">{INFO.main.email}</div>
 						</div>
-
-						<div className="social-text">{INFO.main.email}</div>
 					</a>
 				</div>
 			</div>

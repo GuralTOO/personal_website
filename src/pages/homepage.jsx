@@ -8,8 +8,10 @@ import {
 	faGithub,
 	faStackOverflow,
 	faInstagram,
+	faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
+import WorkingLate from "../Images/working-late.jpg";
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
@@ -24,7 +26,8 @@ import myArticles from "../data/articles";
 import "./styles/homepage.css";
 
 const Homepage = () => {
-	const [stayLogo, setStayLogo] = useState(false);
+	const stayLogo = true;
+	// const [stayLogo, setStayLogo] = useState(false);
 	const [logoSize, setLogoSize] = useState(80);
 	const [oldLogoSize, setOldLogoSize] = useState(80);
 
@@ -42,13 +45,13 @@ const Homepage = () => {
 				if (newLogoSize > 40) {
 					setLogoSize(newLogoSize);
 					setOldLogoSize(newLogoSize);
-					setStayLogo(false);
+					// setStayLogo(false);
 				} else {
-					setStayLogo(true);
+					// setStayLogo(true);
 				}
 			} else {
 				setLogoSize(newLogoSize);
-				setStayLogo(false);
+				// setStayLogo(false);
 			}
 		};
 
@@ -97,6 +100,13 @@ const Homepage = () => {
 
 								<div className="subtitle homepage-subtitle">
 									{INFO.homepage.description}
+									{/* dotted horizontal line */}
+									<div className="homepage-subtitle-line"></div>
+									Currently he is building <a href="https://workspace.gn-works.com" target="_blank" rel="noreferrer"> RapidReview</a>
+									{INFO.homepage.description2}
+									{/* dotted horizontal line */}
+									<div className="homepage-subtitle-line"></div>
+									{INFO.homepage.description3}
 								</div>
 							</div>
 
@@ -104,7 +114,7 @@ const Homepage = () => {
 								<div className="homepage-image-container">
 									<div className="homepage-image-wrapper">
 										<img
-											src="homepage.jpg"
+											src = {WorkingLate}
 											alt="about"
 											className="homepage-image"
 										/>
@@ -113,17 +123,7 @@ const Homepage = () => {
 							</div>
 						</div>
 
-						<div className="homepage-socials">
-							<a
-								href={INFO.socials.twitter}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faTwitter}
-									className="homepage-social-icon"
-								/>
-							</a>
+						{/* <div className="homepage-socials">
 							<a
 								href={INFO.socials.github}
 								target="_blank"
@@ -131,16 +131,6 @@ const Homepage = () => {
 							>
 								<FontAwesomeIcon
 									icon={faGithub}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.stackoverflow}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faStackOverflow}
 									className="homepage-social-icon"
 								/>
 							</a>
@@ -155,6 +145,17 @@ const Homepage = () => {
 								/>
 							</a>
 							<a
+								href={INFO.socials.linkedin}
+								target="_blank"
+								rel="noreferrer"
+							>
+								<FontAwesomeIcon
+									icon={faLinkedin}
+									className="homepage-social-icon"
+								/>
+							</a>
+
+							<a
 								href={`mailto:${INFO.main.email}`}
 								target="_blank"
 								rel="noreferrer"
@@ -164,13 +165,13 @@ const Homepage = () => {
 									className="homepage-social-icon"
 								/>
 							</a>
-						</div>
+						</div> */}
 
-						<div className="homepage-projects">
+						{/* <div className="homepage-projects">
 							<AllProjects />
-						</div>
+						</div> */}
 
-						<div className="homepage-after-title">
+						{/* <div className="homepage-after-title">
 							<div className="homepage-articles">
 								{myArticles.map((article, index) => (
 									<div
@@ -191,7 +192,7 @@ const Homepage = () => {
 							<div className="homepage-works">
 								<Works />
 							</div>
-						</div>
+						</div> */}
 
 						<div className="page-footer">
 							<Footer />

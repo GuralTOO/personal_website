@@ -4,10 +4,13 @@ import { Helmet } from "react-helmet";
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
-import Article from "../components/articles/article";
-
+import WorkingLate from "../Images/working-late.jpg";
+import Headshot from "../Images/Gural-headshot.jpg";
+import AWSStation from "../Images/aws_station.jpg";
+import HomeStationNight from "../Images/HomeStation_Night.jpg";
 import INFO from "../data/user";
 import SEO from "../data/seo";
+
 import myArticles from "../data/articles";
 
 import "./styles/articles.css";
@@ -39,31 +42,90 @@ const Articles = () => {
 						</div>
 					</div>
 
-					<div className="articles-main-container">
-						<div className="title articles-title">
-							{INFO.articles.title}
-						</div>
+					<div className="about-container">
+						<div className="about-main">
+							<div className="about-left-side">
+								<div className="title about-title">
+									{INFO.work.title}
+								</div>
+								<div className="subtitle about-subtitle">
+									{INFO.work.description}
+								</div>
+								<div className="experience-container">
+									{
+										INFO.work.experiences.map((experience, index) => (
+											<div key={index} className="experience-card">
+												<div className="experience-header">
+													<div className="experience-details">
+														<div className="experience-top-row">
+															<h2 className="job-title">{experience.title}</h2>
+															
+															<p className="job-date">{experience.date}</p>
+														</div>
+														<div className="experience-second-row">
+															<img 
+																src={experience.companyLogo}
+																alt={`${experience.company} Logo`} 
+																className="company-logo"
+															/>
+															<a 
+																href={experience.companyLink} 
+																target="_blank" 
+																rel="noopener noreferrer"
+																className="company-name"
+															>
+																{experience.company}
+															</a>
+														</div>
+													</div>
+												</div>
+												<p className="job-description">{experience.description}</p>
+												<div className="skills">
+													{/* add more space between skills */}
+													Skills: &nbsp;
+													{
+														experience.skills.map((skill, index) => (
+															<b style = {{	color: "#007ACC", marginRight: "5px"}}>
+																{skill + (index === experience.skills.length - 1 ? "" : ", ")}																
+															</b>
+														))
+													}
+													
+												</div>
+											</div>
+										))
+									}
+								</div>
+							</div>
 
-						<div className="subtitle articles-subtitle">
-							{INFO.articles.description}
-						</div>
-
-						<div className="articles-container">
-							<div className="articles-wrapper">
-								{myArticles.map((article, index) => (
-									<div
-										className="articles-article"
-										key={(index + 1).toString()}
-									>
-										<Article
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
+							<div className="about-right-side" style={{display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "200px"}}>
+								<div className="about-image-container">
+									<div className="about-image-wrapper">
+										<img
+											src={Headshot}
+											alt="Headshot"
+											className="about-image"
 										/>
 									</div>
-								))}
+								</div>
+								<div className="about-image-container">
+									<div className="about-image-wrapper">
+										<img
+											src={AWSStation}
+											alt="AWS Station"
+											className="about-image"
+										/>
+									</div>
+								</div>
+								<div className="about-image-container">
+									<div className="about-image-wrapper">
+										<img
+											src={HomeStationNight}
+											alt="Home Station at Night"
+											className="about-image"
+										/>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

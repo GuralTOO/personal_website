@@ -3,18 +3,31 @@
 .footer {
 	display: flex;
 	padding-top: 25px;
-	margin-top: 50px;
-	padding-bottom: 25px;
-	align-items: center;
+	margin-top: 30px;
+	padding-bottom: 20px;
+	height: 50px;
+	/* margin-right: -55px; */
+	/* add space between items */
+	justify-content: space-between;
 }
 
 .footer-links,
 .footer-credits {
-	flex-basis: 50%;
+	flex-basis: 40%;
 }
 
 .footer-links {
 	margin-left: -40px;
+	margin-right: 40px;
+	width: auto;
+}
+
+.footer-socials{
+	width: 50%;
+	padding-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .footer-nav-link-list {
@@ -60,4 +73,10 @@
 	.footer-nav-link-list {
 		width: 100%;
 	}
+
+	.footer-socials {
+		display: none
+	}
+
+	
 }

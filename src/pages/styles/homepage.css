@@ -31,6 +31,15 @@
 	width: 85% !important;
 }
 
+.homepage-subtitle-line {
+	/* dashed horizontal line */
+	border-bottom: 1px dashed var(--secondary-color);
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+
 .homepage-first-area-right-side {
 	display: flex;
 	align-items: center;

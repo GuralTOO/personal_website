@@ -1,5 +1,6 @@
 import React from "react";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import INFO from "../../data/user";
 
 import Card from "../common/card";
 
@@ -13,7 +14,23 @@ const Works = () => {
 				title="Work"
 				body={
 					<div className="works-body">
-						<div className="work">
+						{
+							INFO.work.experiences.map((experience, index) => (
+								<div className="work">
+								<img
+									src={experience.companyLogo}
+									alt={`${experience.company} Logo`} 
+									className="work-image"
+								/>
+								<div className="work-title">{experience.company}</div>
+								<div className="work-subtitle" style={{maxWidth: 180}}>
+									{experience.title}
+								</div>
+								<div className="work-duration">{experience.date}</div>
+							</div>
+								))
+						}
+						{/* <div className="work">
 							<img
 								src="./facebook.png"
 								alt="facebook"
@@ -37,7 +54,7 @@ const Works = () => {
 								Software Engineer
 							</div>
 							<div className="work-duration">2019 - Present</div>
-						</div>
+						</div> */}
 					</div>
 				}
 			/>

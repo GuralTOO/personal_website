@@ -39,21 +39,16 @@ const Projects = () => {
 					</div>
 					<div className="projects-container">
 						<div className="title projects-title">
-							Things I’ve made trying to put my dent in the
-							universe.
+							"My excitement to build things made me pick up different skills."
 						</div>
 
 						<div className="subtitle projects-subtitle">
-							I've worked on a variety of projects over the years
-							and I'm proud of the progress I've made. Many of
-							these projects are open-source and available for
-							others to explore and contribute to. If you're
-							interested in any of the projects I've worked on,
-							please feel free to check out the code and suggest
-							any improvements or enhancements you might have in
-							mind. Collaborating with others is a great way to
-							learn and grow, and I'm always open to new ideas and
-							feedback.
+							Relying on his foundation in computer science that he obtained at a young age, Gural has been able
+							to branch out into Mixed Reality development, AI development, high-performance computing, 
+							distributed systems, and more. When building complex projects, Gural prefers to assemble small teams.
+							By planning through the ideation, design, development, and testing stages of a project, Gural is
+							able to leverage his and his teams' strengths in fields such as psychology, design, and business.
+
 						</div>
 
 						<div className="projects-list">
