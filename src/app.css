@@ -67,6 +67,7 @@
 
 .page-footer {
 	position: block;
+	bottom: 0;
 }
 
 .page-footer::before {

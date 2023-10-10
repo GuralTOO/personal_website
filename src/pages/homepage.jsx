@@ -24,6 +24,7 @@ import SEO from "../data/seo";
 import myArticles from "../data/articles";
 
 import "./styles/homepage.css";
+import RotatingItems from "../components/homepage/RotatingItems";
 
 const Homepage = () => {
 	const stayLogo = true;
@@ -70,6 +71,8 @@ const Homepage = () => {
 		borderRadius: stayLogo ? "50%" : "none",
 		boxShadow: stayLogo ? "0px 4px 10px rgba(0, 0, 0, 0.25)" : "none",
 	};
+
+	const rotatingItems = ["Item 1", "Item 2", "Item 3", "Item 4"];
 
 	return (
 		<React.Fragment>
@@ -122,8 +125,11 @@ const Homepage = () => {
 								</div>
 							</div>
 						</div>
+						<div style={{display: 'flex', backgroundColor: 'pink', justifyContent: 'center', alignItems: 'center', width: '95%', padding: '20px', paddingRight: '40px'}}>
+							<RotatingItems items={rotatingItems}/>
+						</div>
 
-						{/* <div className="homepage-socials">
+						 {/* <div className="homepage-socials" >
 							<a
 								href={INFO.socials.github}
 								target="_blank"
@@ -191,14 +197,15 @@ const Homepage = () => {
 
 							<div className="homepage-works">
 								<Works />
-							</div>
-						</div> */}
-
+								</div> */}
+						{/* </div>  */}
+						
+						
 						<div className="page-footer">
 							<Footer />
 						</div>
 					</div>
-				</div>
+				</div>				
 			</div>
 		</React.Fragment>
 	);
