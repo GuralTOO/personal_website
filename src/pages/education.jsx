@@ -42,7 +42,7 @@ const Education = () => {
 						</div>
 					</div>
 
-					<div className="about-container">
+					<div className="about-container" style={{marginBottom: '200px'}}>
 						<div className="about-main">
 							<div className="about-left-side">
 								<div className="title about-title">

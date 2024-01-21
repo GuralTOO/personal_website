@@ -1,30 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faTwitter,
-	faGithub,
-	faStackOverflow,
-	faInstagram,
-	faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-
 import WorkingLate from "../Images/working-late.jpg";
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
-import Article from "../components/homepage/article";
-import Works from "../components/homepage/works";
-import AllProjects from "../components/projects/allProjects";
+
 
 import INFO from "../data/user";
 import SEO from "../data/seo";
-import myArticles from "../data/articles";
 
 import "./styles/homepage.css";
-import RotatingItems from "../components/homepage/RotatingItems";
 
 const Homepage = () => {
 	const stayLogo = true;
@@ -72,10 +58,8 @@ const Homepage = () => {
 		boxShadow: stayLogo ? "0px 4px 10px rgba(0, 0, 0, 0.25)" : "none",
 	};
 
-	const rotatingItems = ["Item 1", "Item 2", "Item 3", "Item 4"];
-
 	return (
-		<React.Fragment>
+		<div>
 			<Helmet>
 				<title>{INFO.main.title}</title>
 				<meta name="description" content={currentSEO.description} />
@@ -94,7 +78,7 @@ const Homepage = () => {
 						</div>
 					</div>
 
-					<div className="homepage-container">
+					<div className="homepage-container" style={{marginBottom: '200px'}}>
 						<div className="homepage-first-area">
 							<div className="homepage-first-area-left-side">
 								<div className="title homepage-title">
@@ -102,14 +86,23 @@ const Homepage = () => {
 								</div>
 
 								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.description}
+										Gural lives in 
+										<a style={{ color: "#3E63DD" }}> New York. </a> 
+										<a>He is a Master's student at </a>
+										<a href = "https://tech.cornell.edu" target="_blank" rel="noreferrer" style = {{color: "#b31b1b"}}>Cornell Tech</a> <a> studying Computer Science. He is also building </a>
+										<a href="https://rapidreview.io" target="_blank" rel="noreferrer" color="#3E63DD">RapidReview.io</a>
+										, an ML-powered platform for literature review.
 									{/* dotted horizontal line */}
 									<div className="homepage-subtitle-line"></div>
-									Currently he is building <a href="https://workspace.gn-works.com" target="_blank" rel="noreferrer"> RapidReview</a>
-									{INFO.homepage.description2}
+									<a>Gural really likes computers. This is evident in his poor eyeseight and his background. His areas of interest include: Machine-Learning/AI, Human-Computer-Interaction, Augmented Reality, and regular Software Engineering.
+									His </a>
+									{/* link to the /work page */}
+									<a href="/work">work</a><a> history and </a><a href="/education">education</a><a>.</a>
 									{/* dotted horizontal line */}
 									<div className="homepage-subtitle-line"></div>
-									{INFO.homepage.description3}
+									<a>Gural is also a fan of economics. He double majored in CS and Economics in college and always feels the need to tell people that he reads The Economist. His </a>
+									<a href={INFO.education.independentResearch.link}>research</a><a>.</a>
+									{/* {INFO.homepage.description3} */}
 								</div>
 							</div>
 
@@ -125,89 +118,13 @@ const Homepage = () => {
 								</div>
 							</div>
 						</div>
-						<div style={{display: 'flex', backgroundColor: 'pink', justifyContent: 'center', alignItems: 'center', width: '95%', padding: '20px', paddingRight: '40px'}}>
-							<RotatingItems items={rotatingItems}/>
-						</div>
-
-						 {/* <div className="homepage-socials" >
-							<a
-								href={INFO.socials.github}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faGithub}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faInstagram}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.linkedin}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faLinkedin}
-									className="homepage-social-icon"
-								/>
-							</a>
-
-							<a
-								href={`mailto:${INFO.main.email}`}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faMailBulk}
-									className="homepage-social-icon"
-								/>
-							</a>
-						</div> */}
-
-						{/* <div className="homepage-projects">
-							<AllProjects />
-						</div> */}
-
-						{/* <div className="homepage-after-title">
-							<div className="homepage-articles">
-								{myArticles.map((article, index) => (
-									<div
-										className="homepage-article"
-										key={(index + 1).toString()}
-									>
-										<Article
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
-										/>
-									</div>
-								))}
-							</div>
-
-							<div className="homepage-works">
-								<Works />
-								</div> */}
-						{/* </div>  */}
-						
-						
-						<div className="page-footer">
-							<Footer />
-						</div>
+					</div>
+					<div className="page-footer">
+						<Footer />
 					</div>
 				</div>				
 			</div>
-		</React.Fragment>
+		</div>
 	);
 };
 

@@ -72,7 +72,7 @@ const Contact = () => {
 						</div>
 					</div>
 
-					<div className="socials-container">
+					<div className="socials-container" style={{marginBottom: "200px"}}>
 						<div className="contact-socials">
 							<Socials />
 						</div>

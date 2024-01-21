@@ -37,7 +37,7 @@ const Projects = () => {
 							<Logo width={46} />
 						</div>
 					</div>
-					<div className="projects-container">
+					<div className="projects-container" style={{marginBottom: "200px"}}>
 						<div className="title projects-title">
 							"My excitement to build things made me pick up different skills."
 						</div>

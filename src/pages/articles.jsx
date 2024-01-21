@@ -11,7 +11,6 @@ import HomeStationNight from "../Images/HomeStation_Night.jpg";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
-import myArticles from "../data/articles";
 
 import "./styles/articles.css";
 
@@ -42,7 +41,7 @@ const Articles = () => {
 						</div>
 					</div>
 
-					<div className="about-container">
+					<div className="about-container" style={{marginBottom: "200px"}}>
 						<div className="about-main">
 							<div className="about-left-side">
 								<div className="title about-title">

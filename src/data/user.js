@@ -13,9 +13,11 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "Hi! I am Gural's personal website.",
+		title: "Gural's personal website.",
 		description:
-			"Gural is a Master's student at Cornell Tech in NYC studying Computer Science, Business, and Design.",
+			"Gural lives in " +
+			<a style={{ color: "#3E63DD" }}>"New York"</a> +
+			" He is a Master's student at Cornell Tech studying Computer Science. He is also building RapidReview.io, an AI-powered platform for literature review.",
 		description2:
 			", leveraging AI to accelerate the literature review for researchers. \n Previously, he was the lead designer and engineer at Don't Go micromobility, leading a team of 3 developers. Having completed Don't Go, he worked at AWS and Coupang as a Software Engineering Intern.",
 		description3:
@@ -26,7 +28,7 @@ const INFO = {
 	education: {
 		title: "Gural is a student at Cornell Tech in NYC.",
 		description:
-			"At Cornell, Gural is pursuing a Master's in Computer Science. This is his courseload this semester:",
+			"At Cornell, Gural is pursuing a Master's in Computer Science. This was his courseload last semester:",
 
 		classes: [
 			{
@@ -154,12 +156,12 @@ const INFO = {
 			"Since moving to the United States as a high schooler in 2017, Gural has held roles in software engineering, research, and restaurant business.",
 		experiences: [
 			{
-				title: "Founder and Lead Developer",
-				company: "RapidReview",
-				companyLink: "https://workspace.gn-works.com", // Please replace this placeholder with the actual link if available
-				companyLogo: require("../Images/RapidReview.png"), // Placeholder for RapidReview logo
+				title: "Founder",
+				company: "RapidReview.io",
+				companyLink: "https://rapidreview.io", // Please replace this placeholder with the actual link if available
+				companyLogo: require("../Images/RR_Logo.png"), // Placeholder for RapidReview logo
 				description:
-					"Building an AI-powered platform to accelerate biomedical research. Enabling researchers to extract and analyze structured data from documents. Leading a team of three.",
+					"Building an ML-powered platform to accelerate research. Users can store, analyze, comment, and collaborate on research papers with the assistance of custom NLP models. Leading a team of three.",
 				date: "Jun 2023 - Present",
 				skills: [
 					"Large Language Models",
@@ -259,7 +261,7 @@ const INFO = {
 
 	projects: [
 		{
-			title: "Rapid Review",
+			title: "RapidReview.io",
 			description:
 				"AI-powered platform for literature review. Extracts and analyzes structured data from uploaded research papers using NLP. In active development.",
 			logos: [
@@ -274,7 +276,7 @@ const INFO = {
 			linkText: "View Project",
 			link: "https://github.com/GuralTOO/workspace",
 			link2Text: "Try It Out",
-			link2: "https://workspace.gn-works.com/",
+			link2: "https://rapidreview.io/",
 		},
 
 		{
